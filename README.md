@@ -1,5 +1,6 @@
 # rustlings
 # Installation
+rustup update
 cargo install rustlings
 # Initialization
 rustlings init
