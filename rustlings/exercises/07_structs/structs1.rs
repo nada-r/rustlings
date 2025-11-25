@@ -29,7 +29,7 @@ mod tests {
         // let green =
         let green = ColorRegularStruct {
             red: 0,
-            green: 225,
+            green: 255,
             blue: 0,
         };
 
@@ -52,7 +52,7 @@ mod tests {
     fn unit_structs() {
         // TODO: Instantiate a unit struct.
         // let unit_struct =
-        let unit_struct = UnitStruct();
+        let unit_struct: UnitStruct = UnitStruct {};
         let message = format!("{unit_struct:?}s are fun!");
 
         assert_eq!(message, "UnitStructs are fun!");
