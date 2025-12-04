@@ -35,7 +35,7 @@ mod tests {
 
         // TODO: Create your own order using the update syntax and template above!
         // let your_order =
-        let mut your_order = order_template;
+        let mut your_order: Order = order_template;
         your_order.name = "Hacker in Rust".to_string();
 
         assert_eq!(your_order.name, "Hacker in Rust");
