@@ -39,16 +39,15 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
         let countscoresT1 = scores.entry(team_1_name).or_insert(TeamScores{goals_scored: 0,goals_conceded: 0});
         *countscoresT1 =  TeamScores{goals_scored: countscoresT1.goals_scored + team_1_score,
                             goals_conceded: countscoresT1.goals_conceded + team_2_score};
+        println!("countscores {:?}", *countscoresT1);
         let countscoresT2 = scores.entry(team_2_name).or_insert(TeamScores{goals_scored: 0,goals_conceded: 0});
         *countscoresT2 =  TeamScores{goals_scored: countscoresT2.goals_scored + team_2_score,
                             goals_conceded: countscoresT2.goals_conceded + team_1_score};
         //*countscoresT1{goals_conceded} += team_2_score;
         //let countscoresT2 = scores.entry(team_2_name).or_insert(TeamScores{goals_scored: team_2_score,goals_conceded: team_1_score});
-        //println!("countscores {:?}", countscoresT1);
+
         println!("{:?}", *countscoresT2);
         println!("{:?}", scores);
-
-
     }
 
     scores
@@ -57,7 +56,17 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
 fn main() {
     // You can optionally experiment here.
     println!("test");
+        const RESULTS: &str = "England,France,4,2
+France,Italy,3,1
+Poland,Spain,2,0
+Germany,England,2,1
+England,Spain,1,0";
+    fn build_scores() {
+        let scores = build_scores_table(RESULTS);
+    }
+    build_scores()
 }
+
 
 #[cfg(test)]
 mod tests {
