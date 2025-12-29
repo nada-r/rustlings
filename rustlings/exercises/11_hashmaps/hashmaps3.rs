@@ -44,8 +44,8 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
                             goals_conceded: countscoresT2.goals_conceded + team_1_score};
         //*countscoresT1{goals_conceded} += team_2_score;
         //let countscoresT2 = scores.entry(team_2_name).or_insert(TeamScores{goals_scored: team_2_score,goals_conceded: team_1_score});
-        println!("countscores {:?}", countscoresT1);
-        //println!("{:?}", countscoresT2);
+        //println!("countscores {:?}", countscoresT1);
+        println!("{:?}", *countscoresT2);
         println!("{:?}", scores);
 
 
