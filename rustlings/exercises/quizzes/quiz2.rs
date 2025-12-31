@@ -18,6 +18,7 @@
 // - The output element is going to be a vector of strings.
 // Use .iter() on input
 // Use .match()
+// Use .repeat()
 
 enum Command {
     Uppercase,
