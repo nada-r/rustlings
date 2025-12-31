@@ -19,6 +19,7 @@
 // Use .iter() on input
 // Use .match()
 // Use .repeat()
+// review former exercises 
 
 enum Command {
     Uppercase,
